@@ -1,0 +1,408 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Costos - Industrial Hub</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .titulo h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        .seccion {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .seccion h2 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .formula {
+            background: #eef2ff;
+            padding: 18px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: #f9fafb;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .ejemplo {
+            background: #f0fdf4;
+            border-left: 5px solid #22c55e;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: white;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 800px) {
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .titulo h1 {
+                font-size: 34px;
+            }
+
+            header {
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h2>⚙️ Industrial Hub</h2>
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="herramientas.html">Herramientas</a>
+
+            <a href="aprender.html">Aprender</a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="contenedor">
+
+        <div class="titulo">
+
+            <h1>💰 Costos</h1>
+
+            <p>
+                Aprende cómo se clasifican y analizan los costos
+                dentro de una empresa.
+            </p>
+
+        </div>
+
+
+        <section class="seccion">
+
+            <h2>¿Qué son los costos?</h2>
+
+            <p>
+                Los costos representan los recursos económicos que
+                una empresa utiliza para fabricar un producto,
+                prestar un servicio o realizar sus actividades.
+            </p>
+
+            <p>
+                Analizar los costos permite conocer cuánto dinero
+                se necesita para operar y ayuda a tomar mejores
+                decisiones dentro de una organización.
+            </p>
+
+            <div class="formula">
+
+                Costo total = Costos fijos + Costos variables
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>📋 Tipos de costos</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>🏢 Costos fijos</h3>
+
+                    <p>
+                        Son aquellos que permanecen relativamente
+                        constantes aunque cambie el nivel de producción.
+                    </p>
+
+                    <p>
+                        Ejemplo: renta de instalaciones.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>📦 Costos variables</h3>
+
+                    <p>
+                        Cambian de acuerdo con la cantidad de productos
+                        fabricados o servicios realizados.
+                    </p>
+
+                    <p>
+                        Ejemplo: materia prima.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>⚙️ Costos directos</h3>
+
+                    <p>
+                        Pueden relacionarse directamente con la fabricación
+                        de un producto.
+                    </p>
+
+                    <p>
+                        Ejemplo: material utilizado en una pieza.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>🧮 Ejemplo práctico</h2>
+
+            <div class="ejemplo">
+
+                <p>
+                    Una empresa tiene los siguientes costos mensuales:
+                </p>
+
+                <p>
+                    <strong>Costos fijos:</strong> $20,000
+                </p>
+
+                <p>
+                    <strong>Costos variables:</strong> $15,000
+                </p>
+
+                <p>
+                    Para obtener el costo total:
+                </p>
+
+                <div class="formula">
+
+                    $20,000 + $15,000 = $35,000
+
+                </div>
+
+                <p>
+                    Por lo tanto, el costo total de operación
+                    en ese periodo es de <strong>$35,000</strong>.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>📊 ¿Por qué es importante analizar los costos?</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>💵 Controlar gastos</h3>
+
+                    <p>
+                        Permite identificar en qué se están utilizando
+                        los recursos económicos.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>📈 Mejorar decisiones</h3>
+
+                    <p>
+                        Ayuda a decidir cuánto producir, cuánto comprar
+                        y cómo utilizar los recursos.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🎯 Determinar precios</h3>
+
+                    <p>
+                        Conocer los costos ayuda a establecer precios
+                        adecuados para los productos o servicios.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>💡 Importancia en Ingeniería Industrial</h2>
+
+            <p>
+                Para un ingeniero industrial, conocer los costos es
+                importante porque permite evaluar la eficiencia de
+                los procesos y detectar oportunidades para reducir
+                gastos sin afectar la calidad.
+            </p>
+
+            <p>
+                Una buena administración de los costos puede contribuir
+                a mejorar la productividad, la rentabilidad y la
+                competitividad de una empresa.
+            </p>
+
+        </section>
+
+
+        <div style="text-align: center;">
+
+            <a href="aprender.html" class="boton">
+                ← Regresar a Aprender
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <p>⚙️ Industrial Hub | Ingeniería Industrial</p>
+
+    </footer>
+
+</body>
+
+</html>
+```

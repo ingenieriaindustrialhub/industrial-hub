@@ -1,0 +1,285 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EOQ | Industrial Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        header {
+            background: #17212b;
+            color: white;
+            padding: 25px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .calculadora {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .descripcion {
+            text-align: center;
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #17212b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        .formula {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .formula h3 {
+            margin-top: 0;
+        }
+
+        .volver {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            color: #17212b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚙️ Industrial Hub</h1>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="calculadora">
+
+            <h2>📦 Calculadora EOQ</h2>
+
+            <p class="descripcion">
+                La cantidad económica de pedido (EOQ) permite determinar
+                cuántas unidades conviene pedir para reducir los costos
+                relacionados con los pedidos y el almacenamiento.
+            </p>
+
+            <label for="demanda">
+                Demanda anual (unidades):
+            </label>
+
+            <input
+                type="number"
+                id="demanda"
+                placeholder="Ejemplo: 10000"
+                step="1"
+            >
+
+            <label for="pedido">
+                Costo por pedido ($):
+            </label>
+
+            <input
+                type="number"
+                id="pedido"
+                placeholder="Ejemplo: 50"
+                step="0.01"
+            >
+
+            <label for="almacenamiento">
+                Costo de almacenamiento por unidad al año ($):
+            </label>
+
+            <input
+                type="number"
+                id="almacenamiento"
+                placeholder="Ejemplo: 2"
+                step="0.01"
+            >
+
+            <button onclick="calcularEOQ()">
+                Calcular EOQ
+            </button>
+
+            <div id="resultado">
+                El resultado aparecerá aquí.
+            </div>
+
+            <div class="formula">
+
+                <h3>📚 Fórmula EOQ</h3>
+
+                <p>
+                    <strong>EOQ = √((2 × D × S) / H)</strong>
+                </p>
+
+                <p>
+                    <strong>D</strong> = Demanda anual<br>
+                    <strong>S</strong> = Costo por pedido<br>
+                    <strong>H</strong> = Costo de almacenamiento por unidad al año
+                </p>
+
+                <h3>📊 ¿Qué calcula?</h3>
+
+                <p>
+                    El EOQ indica la cantidad aproximada de unidades que
+                    deberían solicitarse en cada pedido para buscar un
+                    equilibrio entre el costo de realizar pedidos y el
+                    costo de mantener inventario.
+                </p>
+
+            </div>
+
+        </div>
+
+        <a href="herramientas.html" class="volver">
+            ← Volver a Herramientas
+        </a>
+
+    </div>
+
+    <script>
+
+        function calcularEOQ() {
+
+            const demanda = Number(
+                document.getElementById("demanda").value
+            );
+
+            const pedido = Number(
+                document.getElementById("pedido").value
+            );
+
+            const almacenamiento = Number(
+                document.getElementById("almacenamiento").value
+            );
+
+            if (
+                demanda <= 0 ||
+                pedido <= 0 ||
+                almacenamiento <= 0
+            ) {
+
+                document.getElementById("resultado").innerHTML =
+                    "⚠️ Por favor, ingresa valores válidos.";
+
+                return;
+            }
+
+            const eoq = Math.sqrt(
+                (2 * demanda * pedido) / almacenamiento
+            );
+
+            const numeroPedidos = demanda / eoq;
+
+            const unidadesPorPedido = Math.round(eoq);
+
+            document.getElementById("resultado").innerHTML =
+
+    "<strong>📊 Resultados</strong><br><br>" +
+
+    "Demanda anual: " +
+    demanda.toFixed(2) +
+    " unidades<br>" +
+
+    "Costo por pedido: $" +
+    pedido.toFixed(2) +
+    "<br>" +
+
+    "Costo de almacenamiento: $" +
+    almacenamiento.toFixed(2) +
+    " por unidad/año<br><br>" +
+
+    "<strong>EOQ: " +
+    eoq.toFixed(2) +
+    " unidades</strong><br>" +
+
+    "Cálculo: √((2 × " +
+    demanda.toFixed(2) +
+    " × " +
+    pedido.toFixed(2) +
+    ") ÷ " +
+    almacenamiento.toFixed(2) +
+    ") = " +
+    eoq.toFixed(2) +
+    " unidades<br><br>" +
+
+    "<strong>Cantidad recomendada por pedido: " +
+    unidadesPorPedido +
+    " unidades</strong><br><br>" +
+
+    "Pedidos aproximados al año: " +
+    "<strong>" +
+    numeroPedidos.toFixed(2) +
+    "</strong>";
+        }
+
+    </script>
+
+</body>
+</html>
+```

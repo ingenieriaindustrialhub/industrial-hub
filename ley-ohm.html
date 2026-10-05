@@ -1,0 +1,361 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ley de Ohm | Industrial Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        header {
+            background: #17212b;
+            color: white;
+            padding: 25px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .calculadora {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .descripcion {
+            text-align: center;
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #17212b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        .formula {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .formula h3 {
+            margin-top: 0;
+        }
+
+        .volver {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            color: #17212b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚙️ Industrial Hub</h1>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="calculadora">
+
+            <h2>⚡ Calculadora de Ley de Ohm</h2>
+
+            <p class="descripcion">
+                Calcula voltaje, corriente o resistencia utilizando
+                la Ley de Ohm.
+            </p>
+
+            <label for="voltaje">
+                Voltaje (V):
+            </label>
+
+            <input
+                type="number"
+                id="voltaje"
+                placeholder="Ejemplo: 120"
+                step="0.01"
+            >
+
+            <label for="corriente">
+                Corriente (A):
+            </label>
+
+            <input
+                type="number"
+                id="corriente"
+                placeholder="Ejemplo: 5"
+                step="0.01"
+            >
+
+            <label for="resistencia">
+                Resistencia (Ω):
+            </label>
+
+            <input
+                type="number"
+                id="resistencia"
+                placeholder="Ejemplo: 24"
+                step="0.01"
+            >
+
+            <button onclick="calcularOhm()">
+                Calcular
+            </button>
+
+            <div id="resultado">
+                Ingresa dos valores para calcular el tercero.
+            </div>
+
+            <div class="formula">
+
+                <h3>📚 Fórmula de la Ley de Ohm</h3>
+
+                <p>
+                    <strong>V = I × R</strong>
+                </p>
+
+                <p>
+                    Donde:
+                </p>
+
+                <ul>
+                    <li><strong>V</strong> = Voltaje en volts (V)</li>
+                    <li><strong>I</strong> = Corriente en amperes (A)</li>
+                    <li><strong>R</strong> = Resistencia en ohms (Ω)</li>
+                </ul>
+
+                <h3>📊 Ejemplo</h3>
+
+                <p>
+                    Si tenemos un voltaje de 120 V y una corriente de 5 A:
+                </p>
+
+                <p>
+                    R = V / I
+                </p>
+
+                <p>
+                    R = 120 / 5 = <strong>24 Ω</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+        <a href="herramientas.html" class="volver">
+            ← Volver a Herramientas
+        </a>
+
+    </div>
+
+    <script>
+
+    function calcularOhm() {
+
+        const voltaje = Number(
+            document.getElementById("voltaje").value
+        );
+
+        const corriente = Number(
+            document.getElementById("corriente").value
+        );
+
+        const resistencia = Number(
+            document.getElementById("resistencia").value
+        );
+
+        let resultado = "";
+
+        if (
+            voltaje > 0 &&
+            corriente > 0 &&
+            resistencia <= 0
+        ) {
+
+            const r = voltaje / corriente;
+
+            resultado =
+                "<strong>⚡ Resultados</strong><br><br>" +
+
+                "Voltaje: " +
+                voltaje.toFixed(2) +
+                " V<br>" +
+
+                "Corriente: " +
+                corriente.toFixed(2) +
+                " A<br><br>" +
+
+                "<strong>Resistencia: " +
+                r.toFixed(2) +
+                " Ω</strong><br><br>" +
+
+                "📐 Fórmula utilizada: R = V ÷ I<br>" +
+
+                "🧮 Cálculo: " +
+                voltaje.toFixed(2) +
+                " ÷ " +
+                corriente.toFixed(2) +
+                " = " +
+                r.toFixed(2) +
+                " Ω<br><br>" +
+
+                "💡 Esto significa que el circuito presenta una resistencia de " +
+                "<strong>" +
+                r.toFixed(2) +
+                " Ω.</strong>";
+
+        } else if (
+            voltaje > 0 &&
+            resistencia > 0 &&
+            corriente <= 0
+        ) {
+
+            const i = voltaje / resistencia;
+
+            resultado =
+                "<strong>⚡ Resultados</strong><br><br>" +
+
+                "Voltaje: " +
+                voltaje.toFixed(2) +
+                " V<br>" +
+
+                "Resistencia: " +
+                resistencia.toFixed(2) +
+                " Ω<br><br>" +
+
+                "<strong>Corriente: " +
+                i.toFixed(2) +
+                " A</strong><br><br>" +
+
+                "📐 Fórmula utilizada: I = V ÷ R<br>" +
+
+                "🧮 Cálculo: " +
+                voltaje.toFixed(2) +
+                " ÷ " +
+                resistencia.toFixed(2) +
+                " = " +
+                i.toFixed(2) +
+                " A<br><br>" +
+
+                "💡 La corriente que circula por el circuito es de " +
+                "<strong>" +
+                i.toFixed(2) +
+                " A.</strong>";
+
+        } else if (
+            corriente > 0 &&
+            resistencia > 0 &&
+            voltaje <= 0
+        ) {
+
+            const v = corriente * resistencia;
+
+            resultado =
+                "<strong>⚡ Resultados</strong><br><br>" +
+
+                "Corriente: " +
+                corriente.toFixed(2) +
+                " A<br>" +
+
+                "Resistencia: " +
+                resistencia.toFixed(2) +
+                " Ω<br><br>" +
+
+                "<strong>Voltaje: " +
+                v.toFixed(2) +
+                " V</strong><br><br>" +
+
+                "📐 Fórmula utilizada: V = I × R<br>" +
+
+                "🧮 Cálculo: " +
+                corriente.toFixed(2) +
+                " × " +
+                resistencia.toFixed(2) +
+                " = " +
+                v.toFixed(2) +
+                " V<br><br>" +
+
+                "💡 El voltaje necesario para estas condiciones es de " +
+                "<strong>" +
+                v.toFixed(2) +
+                " V.</strong>";
+
+        } else {
+
+            resultado =
+                "⚠️ Ingresa exactamente dos valores positivos " +
+                "y deja vacío el valor que quieres calcular.";
+
+        }
+
+        document.getElementById("resultado").innerHTML = resultado;
+
+    }
+
+</script>
+
+</body>
+</html>
+```

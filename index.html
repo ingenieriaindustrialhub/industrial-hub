@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Industrial Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        /* ===== HEADER ===== */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        
+        /* ===== HERO ===== */
+
+.hero {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.65)
+        ),
+        url("https://upload.wikimedia.org/wikipedia/commons/f/f0/Industrial_Manufacturing.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+
+
+
+        .hero-contenido {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+        .hero p {
+            font-size: 21px;
+            line-height: 1.6;
+            color: #dbeafe;
+            margin-bottom: 30px;
+        }
+
+        .boton-principal {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 17px;
+            transition: 0.3s;
+        }
+
+        .boton-principal:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+        /* ===== SECCIÓN ===== */
+
+        .seccion {
+            max-width: 1150px;
+            margin: 60px auto;
+            padding: 0 25px;
+        }
+
+        .titulo-seccion {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo-seccion h2 {
+    font-size: 36px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+        .titulo-seccion p {
+            color: #6b7280;
+            font-size: 17px;
+        }
+
+        /* ===== TARJETAS ===== */
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 28px;
+        }
+
+        .card {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.13);
+    border-color: #2563eb;
+}
+
+
+        .icono {
+            font-size: 50px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .boton {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+        
+
+        .boton:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+        /* ===== INFORMACIÓN ===== */
+
+        .info {
+            background: white;
+            border-radius: 15px;
+            padding: 35px;
+            margin-top: 50px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+
+        .info h2 {
+            margin-bottom: 15px;
+        }
+
+        .info p {
+            color: #6b7280;
+            line-height: 1.7;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 25px;
+            margin-top: 70px;
+        }
+
+        /* ===== CELULAR ===== */
+
+        @media (max-width: 900px) {
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 42px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+
+    <header>
+
+        <div class="logo">
+            ⚙️ Industrial Hub
+        </div>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="herramientas.html">Herramientas</a>
+            <a href="aprender.html">Aprender</a>
+        </nav>
+
+    </header>
+
+
+    <!-- ===== HERO ===== -->
+
+   <section class="hero">
+    <div class="hero-contenido">
+        <h1>Industrial Hub</h1>
+
+        <p>
+            Tu plataforma para aprender y aplicar
+            la Ingeniería Industrial.
+        </p>
+
+        <a href="herramientas.html" class="boton">
+            Explorar herramientas
+        </a>
+    </div>
+</section>
+
+
+    <!-- ===== SECCIONES ===== -->
+
+    <section class="seccion">
+
+        <div class="titulo-seccion">
+
+            <h2>Explora Industrial Hub</h2>
+
+            <p>
+                Encuentra herramientas, conocimientos y recursos
+                relacionados con la Ingeniería Industrial.
+            </p>
+
+        </div>
+
+
+        <div class="grid">
+
+
+            <!-- HERRAMIENTAS -->
+
+            <div class="card">
+
+                <div class="icono">🧮</div>
+
+                <h3>Herramientas</h3>
+
+                <p>
+                    Utiliza calculadoras para resolver problemas
+                    de Ingeniería Industrial.
+                </p>
+
+                <a href="herramientas.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- INDUSTRIAS -->
+
+            <div class="card">
+
+                <div class="icono">🏭</div>
+
+                <h3>Industrias</h3>
+
+                <p>
+                    Conoce las diferentes industrias donde
+                    trabaja un ingeniero industrial.
+                </p>
+
+                <a href="industrias.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- MÁQUINAS -->
+
+            <div class="card">
+
+                <div class="icono">⚙️</div>
+
+                <h3>Máquinas</h3>
+
+                <p>
+                    Aprende sobre máquinas y equipos utilizados
+                    en los procesos industriales.
+                </p>
+
+                <a href="maquinas.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- APRENDER -->
+
+            <div class="card">
+
+                <div class="icono">📚</div>
+
+                <h3>Aprender</h3>
+
+                <p>
+                    Aprende conceptos, fórmulas y fundamentos
+                    de Ingeniería Industrial.
+                </p>
+
+                <a href="aprender.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ===== INFORMACIÓN ===== -->
+
+        <div class="info">
+
+            <h2>🚀 Aprende haciendo</h2>
+
+            <p>
+                Industrial Hub es una plataforma creada para facilitar el aprendizaje de la Ingeniería Industrial de una manera práctica y sencilla. Aquí podrás encontrar herramientas para realizar cálculos, aprender conceptos importantes, conocer diferentes industrias y descubrir las principales máquinas utilizadas en los procesos industriales. El objetivo es que puedas aprender mientras aplicas tus conocimientos a situaciones reales.
+
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ===== FOOTER ===== -->
+
+    <footer>
+
+        © 2026 Industrial Hub | Ingeniería Industrial
+
+    </footer>
+
+</body>
+</html>
+```

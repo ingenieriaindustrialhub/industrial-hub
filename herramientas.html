@@ -1,0 +1,418 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Herramientas | Industrial Hub</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        /* ===== HEADER ===== */
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        /* ===== CONTENEDOR ===== */
+
+        .contenedor {
+            max-width: 1150px;
+            margin: 60px auto;
+            padding: 0 25px;
+        }
+
+        /* ===== TITULO ===== */
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .titulo h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+            font-weight: bold;
+        }
+
+        .titulo p {
+            color: #6b7280;
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        /* ===== HERRAMIENTAS ===== */
+
+        .herramientas {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        /* ===== TARJETAS ===== */
+
+        .tarjeta {
+            background: white;
+            padding: 32px 22px;
+            border-radius: 15px;
+            text-align: center;
+
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+            border: 1px solid #e5e7eb;
+
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.13);
+            border-color: #2563eb;
+        }
+
+        /* ===== ICONOS ===== */
+
+        .icono {
+            font-size: 45px;
+            margin-bottom: 18px;
+        }
+
+        /* ===== TEXTO TARJETAS ===== */
+
+        .tarjeta h2 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .tarjeta p {
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        /* ===== BOTONES ===== */
+
+        .boton {
+            display: inline-block;
+            padding: 12px 24px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 8px;
+
+            font-weight: bold;
+            font-size: 15px;
+
+            transition: 0.3s;
+
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.20);
+        }
+
+        /* ===== VOLVER ===== */
+
+        .volver {
+            display: inline-block;
+            margin-top: 40px;
+
+            color: #2563eb;
+            text-decoration: none;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .volver:hover {
+            color: #1d4ed8;
+        }
+
+        /* ===== FOOTER ===== */
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+
+            text-align: center;
+
+            padding: 25px;
+
+            margin-top: 70px;
+        }
+
+        /* ===== TABLET ===== */
+
+        @media (max-width: 900px) {
+
+            .herramientas {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* ===== CELULAR ===== */
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .contenedor {
+                margin: 40px auto;
+            }
+
+            .titulo h1 {
+                font-size: 30px;
+            }
+
+            .titulo p {
+                font-size: 16px;
+            }
+
+            .herramientas {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+
+    <header>
+
+        <div class="logo">
+            ⚙️ Industrial Hub
+        </div>
+
+        <nav>
+
+            <a href="index.html">Inicio</a>
+
+            <a href="herramientas.html">Herramientas</a>
+
+            <a href="aprender.html">Aprender</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ===== CONTENIDO ===== -->
+
+    <main class="contenedor">
+
+        <div class="titulo">
+
+            <h1>🧮 Herramientas de Ingeniería</h1>
+
+            <p>
+                Utiliza herramientas prácticas para resolver
+                problemas de Ingeniería Industrial.
+            </p>
+
+        </div>
+
+
+        <!-- ===== TARJETAS ===== -->
+
+        <div class="herramientas">
+
+
+            <!-- PROMEDIO -->
+
+            <div class="tarjeta">
+
+                <div class="icono">📊</div>
+
+                <h2>Promedio</h2>
+
+                <p>
+                    Calcula el promedio de un conjunto de datos.
+                </p>
+
+                <a href="promedio.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- TIEMPO ESTÁNDAR -->
+
+            <div class="tarjeta">
+
+                <div class="icono">⏱️</div>
+
+                <h2>Tiempo estándar</h2>
+
+                <p>
+                    Calcula tiempos estándar de procesos.
+                </p>
+
+                <a href="tiempo-estandar.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- EOQ -->
+
+            <div class="tarjeta">
+
+                <div class="icono">📦</div>
+
+                <h2>EOQ</h2>
+
+                <p>
+                    Calcula la cantidad económica de pedido.
+                </p>
+
+                <a href="eoq.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- PRODUCTIVIDAD -->
+
+            <div class="tarjeta">
+
+                <div class="icono">📈</div>
+
+                <h2>Productividad</h2>
+
+                <p>
+                    Calcula indicadores de productividad.
+                </p>
+
+                <a href="productividad.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- LEY DE OHM -->
+
+            <div class="tarjeta">
+
+                <div class="icono">⚡</div>
+
+                <h2>Ley de Ohm</h2>
+
+                <p>
+                    Calcula voltaje, corriente y resistencia.
+                </p>
+
+                <a href="ley-ohm.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+            <!-- ÁREAS -->
+
+            <div class="tarjeta">
+
+                <div class="icono">📐</div>
+
+                <h2>Áreas</h2>
+
+                <p>
+                    Calcula áreas de diferentes figuras.
+                </p>
+
+                <a href="areas.html" class="boton">
+                    Abrir
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ===== VOLVER ===== -->
+
+        <a href="index.html" class="volver">
+            ← Volver a Industrial Hub
+        </a>
+
+    </main>
+
+
+    <!-- ===== FOOTER ===== -->
+
+    <footer>
+
+        © 2026 Industrial Hub | Ingeniería Industrial
+
+    </footer>
+
+
+</body>
+</html>
+```

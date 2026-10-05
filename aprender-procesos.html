@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Procesos | Industrial Hub</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h2 {
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        .contenedor {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 18px;
+            color: #4b5563;
+        }
+
+        .seccion {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .seccion h2 {
+            margin-top: 0;
+            color: #111827;
+        }
+
+        .seccion p {
+            line-height: 1.7;
+        }
+
+        .formula {
+            background: #eef2ff;
+            padding: 18px;
+            border-radius: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #f9fafb;
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .ejemplo {
+            background: #f9fafb;
+            padding: 20px;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            line-height: 1.7;
+        }
+
+        .boton {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            color: white;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .titulo h1 {
+                font-size: 32px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h2>⚙️ Industrial Hub</h2>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="herramientas.html">Herramientas</a>
+            <a href="aprender.html">Aprender</a>
+        </nav>
+
+    </header>
+
+
+    <main class="contenedor">
+
+        <div class="titulo">
+
+            <h1>🔄 Procesos</h1>
+
+            <p>
+                Aprende qué son los procesos y por qué son importantes
+                en la Ingeniería Industrial.
+            </p>
+
+        </div>
+
+
+        <section class="seccion">
+
+            <h2>¿Qué es un proceso?</h2>
+
+            <p>
+                Un proceso es un conjunto de actividades relacionadas
+                que utilizan recursos para transformar una entrada
+                en un resultado o salida.
+            </p>
+
+            <p>
+                En la Ingeniería Industrial, estudiar los procesos
+                permite identificar problemas, eliminar actividades
+                innecesarias y mejorar la manera en que se realizan
+                las operaciones.
+            </p>
+
+            <div class="formula">
+                Entrada → Proceso → Salida
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>⚙️ Elementos de un proceso</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>📥 Entrada</h3>
+
+                    <p>
+                        Son los materiales, información, recursos
+                        o elementos necesarios para iniciar el proceso.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🔧 Actividades</h3>
+
+                    <p>
+                        Son las operaciones que transforman las
+                        entradas durante el proceso.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>📤 Salida</h3>
+
+                    <p>
+                        Es el producto, servicio o resultado obtenido
+                        después de realizar las actividades.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>👥 Recursos</h3>
+
+                    <p>
+                        Incluyen trabajadores, máquinas, materiales,
+                        herramientas, tiempo y tecnología.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>🏭 Tipos de procesos</h2>
+
+            <div class="grid">
+
+                <div class="card">
+
+                    <h3>🏗️ Proceso de producción</h3>
+
+                    <p>
+                        Transforma materias primas en productos
+                        terminados mediante diferentes operaciones.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>📦 Proceso logístico</h3>
+
+                    <p>
+                        Se encarga del movimiento y almacenamiento
+                        de materiales y productos.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🛠️ Proceso de mantenimiento</h3>
+
+                    <p>
+                        Busca conservar las máquinas y equipos
+                        en condiciones adecuadas de funcionamiento.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>📋 Proceso administrativo</h3>
+
+                    <p>
+                        Incluye actividades relacionadas con la
+                        planeación, organización y control.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>📚 Ejemplo práctico</h2>
+
+            <div class="ejemplo">
+
+                <p>
+                    Imaginemos una empresa que fabrica una pieza metálica.
+                </p>
+
+                <p>
+                    La <strong>entrada</strong> son las materias primas,
+                    como una barra de acero.
+                </p>
+
+                <p>
+                    El <strong>proceso</strong> incluye operaciones como
+                    corte, torneado, perforado e inspección.
+                </p>
+
+                <p>
+                    La <strong>salida</strong> es la pieza terminada
+                    que cumple con las especificaciones requeridas.
+                </p>
+
+                <div class="formula">
+
+                    Materia prima
+                    → Corte
+                    → Torneado
+                    → Perforado
+                    → Inspección
+                    → Producto terminado
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>📈 Mejora de procesos</h2>
+
+            <p>
+                Una de las funciones de la Ingeniería Industrial es
+                analizar los procesos para encontrar oportunidades
+                de mejora.
+            </p>
+
+            <p>
+                Algunas acciones pueden ser reducir tiempos,
+                eliminar movimientos innecesarios, mejorar la
+                distribución de las áreas, reducir desperdicios
+                y aprovechar mejor los recursos.
+            </p>
+
+            <div class="formula">
+                Analizar → Mejorar → Implementar → Medir
+            </div>
+
+        </section>
+
+
+        <section class="seccion">
+
+            <h2>💡 ¿Por qué son importantes?</h2>
+
+            <p>
+                Conocer y analizar los procesos permite a las empresas
+                trabajar de una manera más organizada y eficiente.
+            </p>
+
+            <p>
+                Una buena gestión de procesos puede ayudar a reducir
+                costos, mejorar la calidad, disminuir tiempos y
+                aumentar la productividad.
+            </p>
+
+        </section>
+
+
+        <section class="seccion" style="text-align: center;">
+
+            <h2>🚀 Sigue aprendiendo</h2>
+
+            <p>
+                Regresa a la sección de aprendizaje para conocer
+                otros temas de Ingeniería Industrial.
+            </p>
+
+            <a href="aprender.html" class="boton">
+                ← Volver a Aprender
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>Industrial Hub | Ingeniería Industrial</p>
+
+    </footer>
+
+</body>
+
+</html>

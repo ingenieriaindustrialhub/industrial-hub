@@ -1,0 +1,256 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productividad | Industrial Hub</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        header {
+            background: #17212b;
+            color: white;
+            padding: 25px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .calculadora {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .descripcion {
+            text-align: center;
+            color: #667085;
+            line-height: 1.6;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 25px;
+            padding: 13px;
+            background: #17212b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.85;
+        }
+
+        #resultado {
+            margin-top: 30px;
+            padding: 25px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            line-height: 1.8;
+        }
+
+        .formula {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            line-height: 1.7;
+        }
+
+        .formula h3 {
+            margin-top: 0;
+        }
+
+        .volver {
+            display: block;
+            margin-top: 25px;
+            text-align: center;
+            color: #17212b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚙️ Industrial Hub</h1>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="calculadora">
+
+            <h2>📈 Calculadora de Productividad</h2>
+
+            <p class="descripcion">
+                Calcula la productividad de un proceso relacionando
+                la cantidad de producción obtenida con los recursos utilizados.
+            </p>
+
+            <label for="produccion">
+                Producción obtenida (unidades):
+            </label>
+
+            <input
+                type="number"
+                id="produccion"
+                placeholder="Ejemplo: 500"
+                step="0.01"
+            >
+
+            <label for="recursos">
+                Recursos utilizados (horas):
+            </label>
+
+            <input
+                type="number"
+                id="recursos"
+                placeholder="Ejemplo: 100"
+                step="0.01"
+            >
+
+            <button onclick="calcularProductividad()">
+                Calcular productividad
+            </button>
+
+            <div id="resultado">
+                El resultado aparecerá aquí.
+            </div>
+
+            <div class="formula">
+
+                <h3>📚 Fórmula de Productividad</h3>
+
+                <p>
+                    <strong>
+                        Productividad = Producción / Recursos utilizados
+                    </strong>
+                </p>
+
+                <p>
+                    La productividad indica cuántas unidades de producción
+                    se obtienen por cada unidad de recurso utilizado.
+                </p>
+
+                <h3>📊 Ejemplo</h3>
+
+                <p>
+                    Si se producen 500 unidades utilizando 100 horas:
+                </p>
+
+                <p>
+                    Productividad = 500 / 100 = <strong>5 unidades/hora</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+        <a href="herramientas.html" class="volver">
+            ← Volver a Herramientas
+        </a>
+
+    </div>
+
+    <script>
+
+        function calcularProductividad() {
+
+            const produccion = Number(
+                document.getElementById("produccion").value
+            );
+
+            const recursos = Number(
+                document.getElementById("recursos").value
+            );
+
+            if (
+                produccion <= 0 ||
+                recursos <= 0
+            ) {
+
+                document.getElementById("resultado").innerHTML =
+                    "⚠️ Por favor, ingresa valores válidos.";
+
+                return;
+            }
+
+            const productividad = produccion / recursos;
+
+            document.getElementById("resultado").innerHTML =
+
+    "<strong>📊 Resultados</strong><br><br>" +
+
+    "Producción obtenida: " +
+    produccion.toFixed(2) +
+    " unidades<br>" +
+
+    "Recursos utilizados: " +
+    recursos.toFixed(2) +
+    " horas<br><br>" +
+
+    "<strong>Productividad: " +
+    productividad.toFixed(2) +
+    " unidades/hora</strong><br><br>" +
+
+    "📐 Cálculo:<br>" +
+
+    productividad.toFixed(2) +
+    " = " +
+    produccion.toFixed(2) +
+    " ÷ " +
+    recursos.toFixed(2) +
+    "<br><br>" +
+
+    "💡 Esto significa que se obtienen aproximadamente " +
+    "<strong>" +
+    productividad.toFixed(2) +
+    " unidades por cada hora de trabajo.</strong>";
+
+        }
+
+    </script>
+
+</body>
+</html>
+```

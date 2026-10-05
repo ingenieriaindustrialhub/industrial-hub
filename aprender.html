@@ -1,0 +1,313 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprender | Industrial Hub</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #222;
+        }
+
+        header {
+            background: #1f2937;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .contenedor {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .intro p {
+            color: #555;
+            font-size: 17px;
+        }
+
+        .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+        .card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .formula {
+            margin-top: 15px;
+            padding: 12px;
+            background: #f0f2f4;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 35px;
+            background: #1f2937;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .volver:hover {
+            background: #111827;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚙️ Industrial Hub</h1>
+
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="herramientas.html">Herramientas</a>
+            <a href="aprender.html">Aprender</a>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="intro">
+            <h2>📚 Aprende Ingeniería Industrial</h2>
+            <p>
+                Conceptos fundamentales para comprender y aplicar
+                la Ingeniería Industrial.
+            </p>
+        </div>
+
+        <div class="grid">
+
+            <a href="aprender-productividad.html" class="card" style="text-decoration: none; color: inherit;">
+    <h3>📊 Productividad</h3>
+
+    <p>
+        La productividad mide qué tan eficientemente se utilizan
+        los recursos para obtener un producto o servicio.
+    </p>
+
+    <div class="formula">
+        Productividad = Producción ÷ Recursos utilizados
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+</a>
+            <a href="aprender-tiempo-estandar.html" class="card" style="text-decoration: none; color: inherit;">
+    <h3>⏱️ Tiempo estándar</h3>
+
+    <p>
+        Es el tiempo permitido para realizar una operación
+        considerando el desempeño del trabajador y los suplementos.
+    </p>
+
+    <div class="formula">
+    Tiempo estándar = Tiempo normal × (1 + suplementos)
+</div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+</a>
+
+    
+                <a href="aprender-inventarios.html" class="card" style="text-decoration: none; color: inherit;">
+    <h3>📦 Inventarios</h3>
+
+    <p>
+        Los inventarios son materiales o productos almacenados
+        para satisfacer las necesidades de producción o de los clientes.
+    </p>
+
+    <div class="formula">
+        Objetivo: mantener el equilibrio entre costo y disponibilidad
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+     </a>
+            <a href="aprender-mejora-continua.html" class="card" style="text-decoration: none; color: inherit;">
+    <h3>📈 Mejora continua</h3>
+
+    <p>
+        Consiste en buscar constantemente formas de mejorar
+        procesos, reducir desperdicios y aumentar la eficiencia.
+    </p>
+
+    <div class="formula">
+        Mejorar = Analizar → Implementar → Medir
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+</a>
+
+            <a href="aprender-lean.html" class="card" style="text-decoration: none; color: inherit;">
+    <h3>🏭 Lean Manufacturing</h3>
+
+    <p>
+        Metodología enfocada en eliminar actividades que no agregan
+        valor y mejorar el flujo de los procesos.
+    </p>
+
+    <div class="formula">
+        Menos desperdicio = Mayor eficiencia
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+</a>
+
+            <a href="aprender-calidad.html" class="card" style="text-decoration: none; color: inherit;">
+
+    <h3>🧮 Calidad</h3>
+
+    <p>
+        La calidad busca que los productos y servicios cumplan
+        con los requisitos establecidos por el cliente.
+    </p>
+
+    <div class="formula">
+        Calidad = Cumplir requisitos del cliente
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+
+</a>
+
+            <a href="aprender-procesos.html" class="card" style="text-decoration: none; color: inherit;">
+
+    <h3>🔄 Procesos</h3>
+
+    <p>
+        Un proceso es un conjunto de actividades relacionadas
+        que transforman entradas en resultados.
+    </p>
+
+    <div class="formula">
+        Entrada → Proceso → Salida
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+
+</a>
+
+            <a href="aprender-costos.html" class="card" style="text-decoration: none; color: inherit;">
+
+    <h3>💰 Costos</h3>
+
+    <p>
+        El análisis de costos permite conocer cuánto cuesta
+        producir un producto o prestar un servicio.
+    </p>
+
+    <div class="formula">
+        Costo total = Costos fijos + Costos variables
+    </div>
+
+    <p style="margin-top: 15px; font-weight: bold;">
+        👆 Haz clic para aprender más
+    </p>
+
+</a>
+        </div>
+
+        <a href="index.html" class="volver">← Volver al inicio</a>
+
+    </div>
+
+    <footer>
+        © 2026 Industrial Hub | Ingeniería Industrial
+    </footer>
+
+</body>
+</html>
+```

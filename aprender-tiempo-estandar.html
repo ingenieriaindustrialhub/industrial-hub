@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tiempo estándar | Industrial Hub</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            color: #1f2937;
+        }
+
+        header {
+            background: #17212b;
+            color: white;
+            padding: 25px 50px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        .contenedor {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .contenido {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            margin-top: 30px;
+            color: #17212b;
+        }
+
+        .intro {
+            text-align: center;
+            color: #667085;
+            line-height: 1.7;
+            font-size: 17px;
+        }
+
+        .formula {
+            margin-top: 25px;
+            padding: 25px;
+            background: #f4f6f8;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .ejemplo {
+            margin-top: 25px;
+            padding: 25px;
+            background: #f4f6f8;
+            border-left: 5px solid #17212b;
+            border-radius: 8px;
+            line-height: 1.8;
+        }
+
+        .lista {
+            line-height: 1.8;
+        }
+
+        .boton {
+            display: block;
+            width: fit-content;
+            margin: 35px auto 0;
+            padding: 13px 25px;
+            background: #17212b;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .boton:hover {
+            opacity: 0.85;
+        }
+
+        .volver {
+            display: block;
+            text-align: center;
+            margin-top: 25px;
+            color: #17212b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 20px;
+            }
+
+            .contenedor {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .contenido {
+                padding: 25px;
+            }
+
+            h2 {
+                font-size: 26px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>⚙️ Industrial Hub</h1>
+    </header>
+
+    <div class="contenedor">
+
+        <div class="contenido">
+
+            <h2>⏱️ Tiempo estándar</h2>
+
+            <p class="intro">
+                El tiempo estándar es una herramienta importante de la
+                Ingeniería Industrial que permite determinar cuánto tiempo
+                debería tomar una operación bajo condiciones normales de trabajo.
+            </p>
+
+            <h3>📚 ¿Qué es el tiempo estándar?</h3>
+
+            <p>
+                El tiempo estándar representa el tiempo necesario para realizar
+                una operación considerando el ritmo de trabajo del operador y
+                los suplementos necesarios durante la actividad.
+            </p>
+
+            <p>
+                Se utiliza para establecer tiempos de producción, planificar
+                operaciones, calcular capacidades y evaluar el desempeño de
+                los procesos.
+            </p>
+
+            <h3>📐 ¿Cómo se calcula?</h3>
+
+            <div class="formula">
+                Tiempo normal = Tiempo observado × Calificación
+                <br><br>
+                Tiempo estándar = Tiempo normal × (1 + Suplementos)
+            </div>
+
+            <h3>🔎 Elementos del cálculo</h3>
+
+            <ul class="lista">
+
+                <li>
+                    <strong>Tiempo observado:</strong>
+                    tiempo medido directamente durante la realización de
+                    una operación.
+                </li>
+
+                <li>
+                    <strong>Calificación de desempeño:</strong>
+                    porcentaje que representa el ritmo de trabajo del operador
+                    respecto al ritmo considerado normal.
+                </li>
+
+                <li>
+                    <strong>Tiempo normal:</strong>
+                    tiempo observado ajustado de acuerdo con la calificación
+                    del desempeño.
+                </li>
+
+                <li>
+                    <strong>Suplementos:</strong>
+                    porcentaje adicional que considera necesidades personales,
+                    fatiga y otras condiciones inevitables.
+                </li>
+
+                <li>
+                    <strong>Tiempo estándar:</strong>
+                    tiempo final establecido para realizar la operación.
+                </li>
+
+            </ul>
+
+            <h3>🧮 Ejemplo práctico</h3>
+
+            <div class="ejemplo">
+
+                Un operador realiza una operación en
+                <strong>2.5 minutos</strong>.
+
+                <br>
+
+                Su calificación de desempeño es de
+                <strong>110%</strong>.
+
+                <br>
+
+                Se considera un suplemento del
+                <strong>15%</strong>.
+
+                <br><br>
+
+                Primero calculamos el tiempo normal:
+
+                <br>
+
+                Tiempo normal = 2.5 × (110 ÷ 100)
+
+                <br>
+
+                Tiempo normal = <strong>2.75 minutos</strong>
+
+                <br><br>
+
+                Después calculamos el tiempo estándar:
+
+                <br>
+
+                Tiempo estándar = 2.75 × (1 + 15 ÷ 100)
+
+                <br>
+
+                Tiempo estándar = <strong>3.16 minutos aproximadamente</strong>
+
+                <br><br>
+
+                Por lo tanto, el tiempo estándar establecido para la operación
+                es de aproximadamente
+                <strong>3.16 minutos.</strong>
+
+            </div>
+
+            <h3>💡 ¿Para qué sirve?</h3>
+
+            <ul class="lista">
+
+                <li>Establecer tiempos de producción.</li>
+
+                <li>Planificar la capacidad de un proceso.</li>
+
+                <li>Calcular necesidades de personal.</li>
+
+                <li>Evaluar el desempeño de los trabajadores.</li>
+
+                <li>Identificar oportunidades de mejora.</li>
+
+                <li>Estimar costos de mano de obra.</li>
+
+            </ul>
+
+            <a href="tiempo-estandar.html" class="boton">
+                ⏱️ Abrir calculadora de tiempo estándar
+            </a>
+
+        </div>
+
+        <a href="aprender.html" class="volver">
+            ← Volver a Aprender
+        </a>
+
+    </div>
+
+</body>
+</html>
